@@ -30,7 +30,7 @@ if source == "Tải ảnh lên":
     if up:
         img = Image.open(up).convert("RGB")
 else:
-    files = sorted(glob.glob("examples/*"))
+       files = sorted(glob.glob("*.jpg") + glob.glob("examples/*"))
     if files:
         choice = st.selectbox("Chọn ảnh mẫu", files)
         img = Image.open(choice).convert("RGB")
